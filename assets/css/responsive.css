@@ -1,0 +1,40 @@
+/* Regras de Responsividade */
+
+/* Telas menores (Mobile e Tablets) */
+@media (max-width: 768px) {
+  :root {
+    --font-size-3xl: 2rem;
+    --font-size-2xl: 1.5rem;
+  }
+
+  .header__container {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .header__menu {
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding-block: var(--space-xl);
+  }
+
+  .features {
+    padding-block: var(--space-xl);
+  }
+}
+
+/* Telas muito pequenas (Mobile pequeno) */
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 1.75rem;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}

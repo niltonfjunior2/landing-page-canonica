@@ -1,0 +1,142 @@
+/* Estilos Principais */
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width-container);
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+/* Cabeçalho */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--space-md);
+}
+
+.header__logo {
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+}
+
+.header__menu {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.header__menu a {
+  color: var(--color-text);
+  transition: color var(--transition-fast);
+}
+
+.header__menu a:hover,
+.header__menu a:focus-visible {
+  color: var(--color-primary);
+}
+
+/* Botões */
+.button {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.button--primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.button--primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* Hero Section */
+.hero {
+  padding-block: var(--space-2xl);
+  background-color: var(--color-surface);
+  text-align: center;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.hero__title {
+  font-size: var(--font-size-3xl);
+  line-height: 1.2;
+}
+
+.hero__subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  max-width: 650px;
+}
+
+/* Features Section */
+.features {
+  padding-block: var(--space-2xl);
+}
+
+.section__title {
+  text-align: center;
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-xl);
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.feature-card {
+  padding: var(--space-lg);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card__title {
+  margin-bottom: var(--space-xs);
+  font-size: var(--font-size-lg);
+}
+
+.feature-card__text {
+  color: var(--color-text-muted);
+}
+
+/* Rodapé */
+.footer {
+  border-top: 1px solid var(--color-border);
+  padding-block: var(--space-lg);
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
